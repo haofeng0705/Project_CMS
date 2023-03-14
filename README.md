@@ -1,46 +1,16 @@
-# vue3-ts-cms
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+技术栈介绍:  
+ 开发工具 :Visual Studio Code  
+ 编程语言 :TypeScript 4.x + JavaScript  
+ 构建工具 :Vite 3.x / Webpack5.x  
+ 前端框架 :Vue 3.x + setup  
+ 路由工具 :Vue Router 4.x  
+ 状态管理 :Vuex 4.x / Pinia  
+ UI 框架 :Element Plus  
+ 可视化 :Echart5.x  
+ 工具库 :@vueuse/core + dayjs + countup.js等等 
+ CSS 预编译 :Sass / Less  
+ HTTP 工具 : Axios  
+ Git Hook 工具 :husky  
+ 代码规范 :EditorConfig + Prettier + ESLint  
+ 提交规范 :Commitizen + Commitlint  
+ 自动部署 :Centos + Jenkins + Nginx
