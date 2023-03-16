@@ -14,3 +14,5 @@
  代码规范 :EditorConfig + Prettier + ESLint  
  提交规范 :Commitizen + Commitlint  
  自动部署 :Centos + Jenkins + Nginx
+
+ test git
