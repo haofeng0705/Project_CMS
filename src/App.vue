@@ -1,21 +1,16 @@
 <template>
   <div class="app">
-    <h2>App</h2>
-    <router-link to="/main"> 主要 </router-link>---
-    <router-link to="/login"> 登 录 </router-link>
-    <router-view></router-view>
+    <router-view>
+
+    </router-view>
   </div>
 </template>
 
-<script setup lang="ts">
-interface IKun {
-  name: string
-}
+<script setup lang="ts"></script>
 
-const ikun: IKun = {
-  name: 'kobe'
+<style scoped>
+.app {
+  width: 100vw;
+  height: 100vh;
 }
-console.log(ikun)
-</script>
-
-<style scoped></style>
+</style>

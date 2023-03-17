@@ -1,6 +1,6 @@
 import axios from 'axios'
-import type { AxiosInstance, InternalAxiosRequestConfig } from 'axios'
-import type { HFRequestConfig } from './type'
+import type { AxiosInstance } from 'axios'
+import type { HYRequestConfig } from './type'
 
 // 拦截器: 蒙版Loading/token/修改配置
 
@@ -14,37 +14,33 @@ import type { HFRequestConfig } from './type'
  *  2.响应结果的类型处理(泛型)
  */
 
-class HFRequest {
+class HYRequest {
   instance: AxiosInstance
 
   // request实例 => axios的实例
-  constructor(config: HFRequestConfig) {
+  constructor(config: HYRequestConfig) {
     this.instance = axios.create(config)
 
     // 每个instance实例都添加拦截器
     this.instance.interceptors.request.use(
       (config) => {
         // loading/token
-        console.log('全局请求成功的拦截')
         return config
       },
       (err) => {
-        console.log('全局请求失败的拦截')
         return err
       }
     )
     this.instance.interceptors.response.use(
       (res) => {
-        console.log('全局响应成功的拦截')
         return res.data
       },
       (err) => {
-        console.log('全局响应失败的拦截')
         return err
       }
     )
 
-    // 针对特定的hfRequest实例添加拦截器
+    // 针对特定的hyRequest实例添加拦截器
     this.instance.interceptors.request.use(
       config.interceptors?.requestSuccessFn,
       config.interceptors?.requestFailureFn
@@ -57,10 +53,10 @@ class HFRequest {
 
   // 封装网络请求的方法
   // T => IHomeData
-  request<T = any>(config: HFRequestConfig<T>) {
+  request<T = any>(config: HYRequestConfig<T>) {
     // 单次请求的成功拦截处理
     if (config.interceptors?.requestSuccessFn) {
-      config = config.interceptors.requestSuccessFn(config) //手动调用回调
+      config = config.interceptors.requestSuccessFn(config)
     }
 
     // 返回Promise
@@ -80,18 +76,18 @@ class HFRequest {
     })
   }
 
-  get<T = any>(config: HFRequestConfig<T>) {
+  get<T = any>(config: HYRequestConfig<T>) {
     return this.request({ ...config, method: 'GET' })
   }
-  post<T = any>(config: HFRequestConfig<T>) {
+  post<T = any>(config: HYRequestConfig<T>) {
     return this.request({ ...config, method: 'POST' })
   }
-  delete<T = any>(config: HFRequestConfig<T>) {
+  delete<T = any>(config: HYRequestConfig<T>) {
     return this.request({ ...config, method: 'DELETE' })
   }
-  patch<T = any>(config: HFRequestConfig<T>) {
+  patch<T = any>(config: HYRequestConfig<T>) {
     return this.request({ ...config, method: 'PATCH' })
   }
 }
 
-export default HFRequest
+export default HYRequest
