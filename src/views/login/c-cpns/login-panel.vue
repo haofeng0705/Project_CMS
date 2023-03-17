@@ -8,10 +8,10 @@
       <el-tabs type="border-card" stretch v-model="activeName">
         <!-- 1.账号登录的Pane -->
         <el-tab-pane name="account">
-          <!-- 使用插槽 具名插槽: #label -->
+                 <!-- 使用插槽 具名插槽: #label -->
           <template #label>
             <div class="label">
-              <!-- 添加 icon -->
+                  <!-- 添加 icon -->
               <el-icon><UserFilled /></el-icon>
               <span class="text">帐号登录</span>
             </div>
@@ -50,18 +50,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { localCache } from '@/utils/cache'
+import { ref, watch } from 'vue'
 import PaneAccount from './pane-account.vue'
 import PanePhone from './pane-phone.vue'
 
 const activeName = ref('account')
-const isRemPwd = ref(false)
+const isRemPwd = ref<boolean>(localCache.getCache('isRemPwd') ?? false)
 // <InstanceType<typeof PaneAccount>>就相当于 PaneAccount 的 type
+watch(isRemPwd, (newValue) => {
+  localCache.setCache('isRemPwd', newValue)
+})
 const accountRef = ref<InstanceType<typeof PaneAccount>>()
 
 function handleLoginBtnClick() {
   if (activeName.value === 'account') {
-    accountRef.value?.loginAction()
+    accountRef.value?.loginAction(isRemPwd.value)
   } else {
     console.log('用户在进行手机登录')
   }
