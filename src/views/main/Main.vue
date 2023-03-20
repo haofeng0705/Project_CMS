@@ -21,7 +21,7 @@ import { ref } from 'vue'
 import MainMenu from '@/components/main-menu/main-menu.vue'
 import MainHeader from '@/components/main-header/main-header.vue'
 
-// 处理main-header中折叠的变化
+// 处理main-header中折叠的变化, 接受到 header 中的 emit
 const isFold = ref(false)
 function handleFoldChange(flag: boolean) {
   isFold.value = flag

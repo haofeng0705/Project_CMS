@@ -54,6 +54,7 @@ router.beforeEach((to) => {
   // 只有登录成功(token), 才能真正进入到main页面
   const token = localCache.getCache(LOGIN_TOKEN)
   if (to.path.startsWith('/main') && !token) {
+    // console.log('守卫执行跳转')
     return '/login'
   }
 })

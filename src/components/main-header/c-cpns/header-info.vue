@@ -22,7 +22,7 @@
             :size="30"
             src="https://upload.jianshu.io/users/upload_avatars/1102036/c3628b478f06.jpeg"
           />
-          <span class="name">coderwhy</span>
+          <span class="name">admin</span>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
@@ -51,6 +51,7 @@ import { LOGIN_TOKEN } from '@/global/constants'
 import { localCache } from '@/utils/cache'
 
 const router = useRouter()
+// 清除缓存 -> 跳转到 login
 function handleExitClick() {
   localCache.removeCache(LOGIN_TOKEN)
   router.push('/login')

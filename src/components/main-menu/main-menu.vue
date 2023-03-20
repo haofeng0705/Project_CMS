@@ -3,7 +3,7 @@
     <!-- 1.logo -->
     <div class="logo">
       <img class="img" src="@/assets/img/logo.svg" alt="" />
-      <h2 v-show="!isFold" class="title">弘源管理系统</h2>
+      <h2 v-show="!isFold" class="title">管理系统</h2>
     </div>
 
     <!-- 2.menu -->
@@ -15,8 +15,9 @@
         active-text-color="#fff"
         background-color="#001529"
       >
-        <!-- 遍历整个菜单 -->
+        <!-- 遍历整个菜单 双重循环 -->
         <template v-for="item in userMenus" :key="item.id">
+          <!-- index 为 string 类型 -->
           <el-sub-menu :index="item.id + ''">
             <template #title>
               <!-- 字符串: el-icon-monitor => 组件 component动态组件 -->
@@ -98,6 +99,7 @@ defineProps({
 // 1.获取动态的菜单
 const loginStore = useLoginStore()
 const userMenus = loginStore.userMenus
+console.log('userMenus->', userMenus)
 
 // 2.监听item的点击
 const router = useRouter()

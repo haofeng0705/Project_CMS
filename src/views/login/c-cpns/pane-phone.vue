@@ -1,8 +1,8 @@
 <template>
   <div class="panel-phone">
-    <el-form label-width="60px" size="large">
+    <el-form label-width="60px" size="large" :model="phone">
       <el-form-item label="手机号">
-        <el-input />
+        <el-input v-model="phone.phone" />
       </el-form-item>
       <el-form-item label="验证码">
         <div class="verify-code">
@@ -14,7 +14,14 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref,reactive } from 'vue'
+
+const phone = reactive({
+  phone: '',
+  code:''
+})
+</script>
 
 <style lang="less" scoped>
 .panel-phone {
