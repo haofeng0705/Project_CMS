@@ -1,22 +1,19 @@
 <template>
   <div class="login-panel">
     <!-- 顶部的标题 -->
-    <h1 class="title">后台管理系统</h1>
+    <h1 class="title">弘源后台管理系统</h1>
 
     <!-- 中间的tabs切换 -->
     <div class="tabs">
       <el-tabs type="border-card" stretch v-model="activeName">
         <!-- 1.账号登录的Pane -->
         <el-tab-pane name="account">
-                 <!-- 使用插槽 具名插槽: #label -->
           <template #label>
             <div class="label">
-                  <!-- 添加 icon -->
               <el-icon><UserFilled /></el-icon>
               <span class="text">帐号登录</span>
             </div>
           </template>
-          <!-- 输入的两个框框 -->
           <pane-account ref="accountRef" />
         </el-tab-pane>
 
@@ -57,7 +54,6 @@ import PanePhone from './pane-phone.vue'
 
 const activeName = ref('account')
 const isRemPwd = ref<boolean>(localCache.getCache('isRemPwd') ?? false)
-// <InstanceType<typeof PaneAccount>>就相当于 PaneAccount 的 type
 watch(isRemPwd, (newValue) => {
   localCache.setCache('isRemPwd', newValue)
 })
@@ -83,7 +79,6 @@ function handleLoginBtnClick() {
   }
 
   .label {
-    // 居中的布局
     display: flex;
     align-items: center;
     justify-content: center;
