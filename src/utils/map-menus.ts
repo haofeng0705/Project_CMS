@@ -13,7 +13,6 @@ function loadLocalRoutes() {
       eager: true
     }
   )
-  // console.log('files->',files)
   // 1.2.将加载的对象放到localRoutes
   for (const key in files) {
     const module = files[key]
@@ -22,7 +21,7 @@ function loadLocalRoutes() {
 
   return localRoutes
 }
-//作为全局变量导出
+
 export let firstMenu: any = null
 export function mapMenusToRoutes(userMenus: any[]) {
   // 1.加载本地路由
@@ -83,6 +82,5 @@ export function mapPathToBreadcrumbs(path: string, userMenus: any[]) {
       }
     }
   }
-  // console.log('breadcrumbs->',breadcrumbs)
   return breadcrumbs
 }

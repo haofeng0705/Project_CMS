@@ -82,7 +82,7 @@ function loginAction(isRemPwd: boolean) {
     }
   })
 }
-// 把 登录操作暴露给父组件 login panel
+
 defineExpose({
   loginAction
 })

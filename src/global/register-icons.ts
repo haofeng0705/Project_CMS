@@ -6,5 +6,5 @@ function registerIcons(app: App<Element>) {
     app.component(key, component)
   }
 }
-//当插件用
+
 export default registerIcons

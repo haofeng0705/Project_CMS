@@ -48,7 +48,6 @@ const router = createRouter({
 // ]
 
 // // 2.动态的添加路由
-// addRoute(parentName, route): () => void
 // router.addRoute('main', localRoutes[0])
 // router.addRoute('main', localRoutes[1])
 
@@ -61,7 +60,6 @@ router.beforeEach((to) => {
   // 只有登录成功(token), 才能真正进入到main页面
   const token = localCache.getCache(LOGIN_TOKEN)
   if (to.path.startsWith('/main') && !token) {
-    // console.log('守卫执行跳转')
     return '/login'
   }
 

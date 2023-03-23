@@ -11,8 +11,7 @@
 </template>
 
 <script setup lang="ts">
-
-import { computed, isProxy, reactive, ref, watch } from 'vue'
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import useLoginStore from '@/store/login/login'
 import { mapPathToBreadcrumbs } from '@/utils/map-menus'
@@ -33,7 +32,7 @@ const breadcrumbs = computed(() => {
 })
 
 
-watch
+
 </script>
 
 <style lang="less" scoped>
