@@ -130,9 +130,8 @@ function fetchUserListData(formData: any = {}) {
   const offset = (currentPage.value - 1) * size
   const pageInfo = { size, offset }
 
-  // 2.发起网络请求, 将 pageinfo 和 formdata 综合在一起发送请求
+  // 2.发起网络请求
   const queryInfo = { ...pageInfo, ...formData }
-  // console.log('queryInfo->',queryInfo)
   systemStore.postUsersListAction(queryInfo)
 }
 

@@ -17,7 +17,6 @@
       >
         <!-- 遍历整个菜单 -->
         <template v-for="item in userMenus" :key="item.id">
-          <!-- index 为 string 类型 -->
           <el-sub-menu :index="item.id + ''">
             <template #title>
               <!-- 字符串: el-icon-monitor => 组件 component动态组件 -->

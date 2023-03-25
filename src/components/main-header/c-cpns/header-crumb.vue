@@ -18,21 +18,9 @@ import { mapPathToBreadcrumbs } from '@/utils/map-menus'
 
 const route = useRoute()
 const userMenus = useLoginStore().userMenus
-//也可以使用 watch 来实现
-// const breadcrumbs:any  = ref([])
-// watch(() => {
-// return mapPathToBreadcrumbs(route.path, userMenus)
-// }, (newVal) => {
-//   breadcrumbs.value  = newVal ;
-// }, {
-//   immediate: true
-// })
 const breadcrumbs = computed(() => {
   return mapPathToBreadcrumbs(route.path, userMenus)
 })
-
-
-
 </script>
 
 <style lang="less" scoped>

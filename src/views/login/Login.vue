@@ -9,7 +9,6 @@ import LoginPanel from './c-cpns/login-panel.vue'
 </script>
 
 <style lang="less" scoped>
-// 占满整个屏幕
 .login {
   display: flex;
   align-items: center;

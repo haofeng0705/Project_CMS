@@ -67,7 +67,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref, toRef } from 'vue'
+import { reactive, ref } from 'vue'
 import useMainStore from '@/store/main/main'
 import { storeToRefs } from 'pinia'
 import useSystemStore from '@/store/main/system/system'

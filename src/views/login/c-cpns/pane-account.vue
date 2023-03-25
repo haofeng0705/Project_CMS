@@ -8,7 +8,6 @@
       status-icon
       ref="formRef"
     >
-        <!-- prop="name" 给校验传递 -->
       <el-form-item label="帐号" prop="name">
         <el-input v-model="account.name" />
       </el-form-item>

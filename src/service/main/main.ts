@@ -1,4 +1,4 @@
-import hyRequest from '@/service'
+import hyRequest from '..'
 
 export function getEntireRoles() {
   return hyRequest.post({
@@ -9,5 +9,11 @@ export function getEntireRoles() {
 export function getEntireDepartments() {
   return hyRequest.post({
     url: '/department/list'
+  })
+}
+
+export function getEntireMenus() {
+  return hyRequest.post({
+    url: '/menu/list'
   })
 }
