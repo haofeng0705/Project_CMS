@@ -1,17 +1,20 @@
 const contentConfig = {
-  pageName: 'department',
+  pageName: 'goods',
   header: {
-    title: '部门列表',
-    btnTitle: '新建部门'
+    title: '商品列表',
+    btnTitle: '新建商品'
   },
   propsList: [
     // 1.selection 2.index
     { type: 'selection', label: '选择', width: '80px' },
     { type: 'index', label: '序号', width: '80px' },
 
-    { type: 'normal', label: '部门名称', prop: 'name', width: '150px' },
-    { type: 'normal', label: '部门领导', prop: 'leader', width: '150px' },
-    { type: 'normal', label: '上级部门', prop: 'parentId', width: '150px' },
+    { type: 'normal', label: '商品名称', prop: 'name', width: '150px' },
+    { type: 'normal', label: '原价', prop: 'oldPrice', width: '150px' },
+    { type: 'normal', label: '现价', prop: 'newPrice', width: '150px' },
+    { type: 'normal', label: '地址', prop: 'address', width: '150px' },
+    { type: 'normal', label: '缩略图', prop: 'imgUrl', width: '150px' },
+
 
     // {
     //   type: 'custom',

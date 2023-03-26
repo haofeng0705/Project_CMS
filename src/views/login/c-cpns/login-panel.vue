@@ -1,13 +1,14 @@
 <template>
   <div class="login-panel">
     <!-- 顶部的标题 -->
-    <h1 class="title">弘源后台管理系统</h1>
+    <h1 class="title">后台管理系统</h1>
 
     <!-- 中间的tabs切换 -->
     <div class="tabs">
       <el-tabs type="border-card" stretch v-model="activeName">
         <!-- 1.账号登录的Pane -->
         <el-tab-pane name="account">
+          <!-- 插槽:icon+title -->
           <template #label>
             <div class="label">
               <el-icon><UserFilled /></el-icon>

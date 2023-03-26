@@ -3,7 +3,7 @@
     <!-- 1.logo -->
     <div class="logo">
       <img class="img" src="@/assets/img/logo.svg" alt="" />
-      <h2 v-show="!isFold" class="title">弘源管理系统</h2>
+      <h2 v-show="!isFold" class="title">Main-Menu</h2>
     </div>
 
     <!-- 2.menu -->
@@ -62,6 +62,7 @@ const userMenus = loginStore.userMenus
 // 2.监听item的点击
 const router = useRouter()
 function handleItemClick(item: any) {
+  // console.log('item->',{...item})
   const url = item.url
   router.push(url)
 }
@@ -69,6 +70,7 @@ function handleItemClick(item: any) {
 // 3.ElMenu的默认菜单
 const route = useRoute()
 const defaultActive = computed(() => {
+  //根据当前的 path 去匹配路由
   const pathMenu = mapPathToMenu(route.path, userMenus)
   return pathMenu.id + ''
 })

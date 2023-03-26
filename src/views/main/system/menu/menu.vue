@@ -10,4 +10,6 @@ import contentConfig from './config/content.config'
 </script>
 
 <style scoped>
+.menu {
+}
 </style>

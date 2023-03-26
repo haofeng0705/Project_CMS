@@ -1,6 +1,6 @@
 <template>
   <div class="not-found">
-    <h2>您输入的路径地址不正确, 请联系管理员~</h2>
+    <h1>404 NOT FOUND...</h1>
   </div>
 </template>
 
@@ -8,6 +8,6 @@
 
 <style lang="less" scoped>
 .not-found {
-  color: purple;
+  color: red;
 }
 </style>

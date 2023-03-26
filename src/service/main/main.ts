@@ -17,3 +17,9 @@ export function getEntireMenus() {
     url: '/menu/list'
   })
 }
+
+export function getEntireGoods() {
+  return hyRequest.post({
+    url: '/goods/list'
+  })
+}

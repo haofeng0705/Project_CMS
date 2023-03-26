@@ -2,6 +2,7 @@
   <div class="main-header">
     <div class="menu-icon" @click="handleMenuIconClick">
       <el-icon size="28px">
+        <!-- 动态组件 -->
         <component :is="isFold ? 'Expand' : 'Fold'" />
       </el-icon>
     </div>

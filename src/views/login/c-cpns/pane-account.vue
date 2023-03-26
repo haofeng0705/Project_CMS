@@ -29,7 +29,7 @@ import { localCache } from '@/utils/cache'
 const CACHE_NAME = 'name'
 const CACHE_PASSWORD = 'password'
 
-// 1.定义account数据
+// 1.定义account数据, 如果本地有缓存则从本地获取,没有的话初始值为空
 const account = reactive<IAccount>({
   name: localCache.getCache(CACHE_NAME) ?? '',
   password: localCache.getCache(CACHE_PASSWORD) ?? ''
