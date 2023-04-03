@@ -18,6 +18,7 @@ interface IAnalysisState {
 const useAnalysisStore = defineStore('analysis', {
   state: (): IAnalysisState => ({
     amountList: [],
+    
     goodsCategoryCount: [],
     goodsCategorySale: [],
     goodsCategoryFavor: [],

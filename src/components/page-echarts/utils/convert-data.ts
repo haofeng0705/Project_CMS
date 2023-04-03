@@ -3,7 +3,7 @@ import { coordinateData } from './coordinate-data'
 export function convertData(data: any) {
   const res = []
   for (let i = 0; i < data.length; i++) {
-    const geoCoord = coordinateData[data[i].name]
+    const geoCoord = coordinateData[data[i].name]//根据名字找经纬度 
     if (geoCoord) {
       res.push({
         name: data[i].name,
