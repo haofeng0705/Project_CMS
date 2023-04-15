@@ -69,6 +69,7 @@ function loginAction(isRemPwd: boolean) {
       loginStore.loginAccountAction({ name, password }).then(() => {
         // 3.判断是否需要记住密码
         if (isRemPwd) {
+          console.log('isRemPwd->',isRemPwd)
           localCache.setCache(CACHE_NAME, name)
           localCache.setCache(CACHE_PASSWORD, password)
         } else {

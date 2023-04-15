@@ -63,6 +63,7 @@ const accountRef = ref<InstanceType<typeof PaneAccount>>()
 function handleLoginBtnClick() {
   if (activeName.value === 'account') {
     accountRef.value?.loginAction(isRemPwd.value)
+    console.log('isRemPwd.value->',isRemPwd.value)
   } else {
     console.log('用户在进行手机登录')
   }
